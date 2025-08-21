@@ -556,7 +556,18 @@
   $(document).ready(function(){0==$('.organictabs__menu [data-tab="default"]').length&&$(".organictabs__content [data-tab]:not(:first-child)").each(function(){$(this).hide()}),$(".organictabs__menu [data-tab]").on("click",function(){let t=$(this).attr("data-tab");$(this).hasClass("active-tab")||($(".organictabs__menu .active-tab").removeClass("active-tab"),$(this).addClass("active-tab"),"default"==$(this).attr("data-tab")?$(".organictabs__content [data-tab]").each(function(){$(this).show()}):$(".organictabs__content [data-tab]").each(function(){$(this).attr("data-tab")!=t?$(this).hide():$(this).show()}))})});</script>
 <link rel="stylesheet" href="whatsapp.css" /></head>
 
-<body class="mpi-rules">
+<body class="mpi-rules"><!-- botão flutuante -->
+<a href="https://wa.me/5541991452534"
+   class="zap-glass"
+   target="_blank"
+   aria-label="Fale conosco agora mesmo"
+   onclick="if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17298490145/z1tQCLfptOgaEKGGyLhA'});}">
+   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+</a>
+
+<div class="zap-msg-bubble">
+  💬 Precisa de ajuda jurídica?<br><strong>Fale conosco agora mesmo!</strong>
+</div>
   <div class="mpi-topo">
     <div class="wrapper">
         <div class="row align-items-center h-100">
