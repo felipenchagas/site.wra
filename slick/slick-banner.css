@@ -1,1 +1,79 @@
-.slick-banner,.slick-banner .slick-track{background-color:rgba(0,0,0,.7);display:flex;flex-flow:row nowrap;height:527.97px;overflow:hidden}.slick-banner .slick-next,.slick-banner .slick-prev{height:unset;width:unset;z-index:1}.slick-banner .slick-prev{left:25px}.slick-banner .slick-next{right:25px}.slick-banner .slick-next:before,.slick-banner .slick-prev:before{color:#fff;font:28px/normal FontAwesome;opacity:.5;transition:.3s}.slick-banner .slick-next:hover:before,.slick-banner .slick-prev:hover:before{opacity:1}.slick-banner .slick-slide{height:527.97px}.slick-banner .slick-slide img:not(.slick-thumb){height:100%;object-fit:cover;width:100%}.slick-banner .slick-slide:not(a){background-color:#fff;background-image:var(--background);background-position:50%;background-size:cover}.slick-banner .slick-slide:not(a)>div{align-items:center;display:flex;flex-flow:column;height:100%;justify-content:center;margin:0 auto;max-width:var(--wrapper-width);padding:25px}.slick-banner .slick-slide:not(a) div img.slick-thumb{border-radius:var(--border-radius);display:block;height:250px;margin:0 auto;object-fit:cover;width:250px}.slick-banner .slick-slide.slick-current:not(a) div>*{animation-delay:.25s;animation-duration:.75s;animation-fill-mode:forwards;animation-name:fadeText;animation-timing-function:cubic-bezier(.19,.66,.56,1);opacity:0}@keyframes fadeText{0%{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}.slick-banner.slick-dotted{margin-bottom:0}.slick-banner.slick-dotted .slick-dots{bottom:0;padding:15px 0}.slick-banner.slick-dotted .slick-dots li button:before,.slick-banner.slick-dotted .slick-dots li.slick-active button:before{color:#fff;font:14px/normal FontAwesome}@media only screen and (max-width:576px){.slick-banner .slick-slide{height:200px}.slick-banner .slick-slide img{object-fit:cover}}
+/* Banner principal */
+.slick-banner {
+  height: 80vh !important;       /* ocupa 80% da altura da tela */
+  max-height: 700px;             /* limite opcional */
+  min-height: 400px;             /* garante altura mínima */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajustes internos do slick */
+.slick-banner .slick-list,
+.slick-banner .slick-track,
+.slick-banner .slick-slide {
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagem do slide SEM corte */
+.slick-banner .slick-slide img:not(.slick-thumb) {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;  /* mostra tudo, sem cortar */
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Caso o slide use background em vez de <img> */
+.slick-banner .slick-slide:not(a) {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Botões de navegação */
+.slick-banner .slick-prev,
+.slick-banner .slick-next {
+  height: unset;
+  width: unset;
+  z-index: 2;
+}
+.slick-banner .slick-prev { left: 25px; }
+.slick-banner .slick-next { right: 25px; }
+
+.slick-banner .slick-next:before,
+.slick-banner .slick-prev:before {
+  color: #fff;
+  font: 28px/normal FontAwesome;
+  opacity: .5;
+  transition: .3s;
+}
+.slick-banner .slick-next:hover:before,
+.slick-banner .slick-prev:hover:before {
+  opacity: 1;
+}
+
+/* Dots */
+.slick-banner.slick-dotted { margin-bottom: 0; }
+.slick-banner.slick-dotted .slick-dots {
+  bottom: 0;
+  padding: 15px 0;
+}
+.slick-banner.slick-dotted .slick-dots li button:before,
+.slick-banner.slick-dotted .slick-dots li.slick-active button:before {
+  color: #fff;
+  font: 14px/normal FontAwesome;
+}
+
+/* Mobile */
+@media only screen and (max-width: 576px) {
+  .slick-banner {
+    height: 60vh !important;  /* ocupa mais da tela no celular */
+    min-height: 280px;
+  }
+}
