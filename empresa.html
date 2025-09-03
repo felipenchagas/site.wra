@@ -497,76 +497,221 @@
   <div class="clear"></div>
 </header>
 <div id="header-block"></div>  <main>
-    <div class="content">
-      <section>
-        
-<div class="bread bread--default bread--auto">
-    <div class="wrapper">
-        <div class="bread__row">
+    <style>
+/* Estilos para a nova seção "Empresa" */
+.wra-about-section {
+  font-family: Arial, sans-serif;
+  color: #444;
+  padding: 60px 0;
+}
+
+.wra-about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wra-logo-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.wra-logo-intro img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.wra-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+/* Títulos de seção com linha inferior */
+.wra-section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #004080; /* Azul escuro */
+  margin-top: 60px;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.wra-section-title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #ff9900; /* Laranja */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Seção de Missão, Visão e Valores */
+.wra-mvv-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .wra-mvv-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.wra-mvv-item {
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa; /* Fundo suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wra-mvv-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wra-mvv-item h3 {
+  font-size: 1.5rem;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.wra-mvv-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Seção de Valores (com ícones) */
+.wra-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .wra-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.wra-value-card {
+  text-align: center;
+  padding: 25px;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.wra-value-card:hover {
+  transform: translateY(-5px);
+  background-color: #eaf6ff; /* Fundo suave no hover */
+}
+
+.wra-value-card .wra-icon {
+  font-size: 2.5rem;
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.wra-value-card h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+</style>
+
+<div class="content">
+  <section class="wra-about-section">
+    <div class="wra-about-container">
+
+      <div class="bread bread--default bread--auto">
+        <div class="wrapper">
+          <div class="bread__row">
             <nav aria-label="breadcrumb">
-                <ul id="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li class="bread__column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="https://wra.ind.br" itemprop="item" title="Home">
-                            <span itemprop="name">Home</span>
-                        </a>
-                        <meta itemprop="position" content="1">
-                    </li>                    
-                </ul>
+              <ul id="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="bread__column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <a href="https://wra.ind.br" itemprop="item" title="Home">
+                    <span itemprop="name">Home</span>
+                  </a>
+                  <meta itemprop="position" content="1">
+                </li>
+              </ul>
             </nav>
             <h1 class="bread__title">Empresa</h1>
-        </div>
-    </div>
-</div>
-        <!--STARTCOMPONENTS-->
-        <div class="container">
-          <div class="wrapper text-center">
-            <div class="empresa__logo">
-              <img src="imagens/logo.png" alt="WRA" title="WRA" loading="lazy" class="picture-center">
-            </div>
-            <p class="fs-16">A WRA é uma empresa especialista em serviços de engenharia, projetos, planejamentos e montagens industriais.</p>
-            <p class="fs-16">Nossa equipe técnica possui vasta experiência e está alinhada com as principais tendências e tecnologias mundiais e, por isso, garante a constante melhoria de processos produtivos.</p>
-            <p class="fs-16">Somos especialistas em melhorias contínuas de tecnologia no mercado de movimentação de granéis.</p>
-            <p class="fs-16">Realizamos projetos básicos e executivos, trazendo soluções qualificadas de engenharia industrial - seja de forma direta ou em parceria com empresas tradicionais do mercado.</p>
-            <p class="fs-16">Conheça mais sobre nós:</p>
-            <h2 class="fw-900 primary-color">MISSÃO</h2>
-            <p class="fs-16">Planejar e oferecer soluções com excelência, segurança e qualidade dentro do prazo estipulado. Oferecer tecnologia nas áreas de montagem eletromecânica e manutenção industrial, proporcionando a satisfação de nosso cliente final, acionistas, colaboradores e toda a sociedade.</p>
-            <h2 class="fw-900 primary-color">VISÃO</h2>
-            <p class="fs-16">Ser destaque no cenário brasileiro de engenharia, nas áreas de planejamento, coordenação, instalações, montagem e manutenção eletromecânica industrial.</p>
-            <h2 class="fw-900 primary-color">VALORES</h2>
-            <p class="fs-16">Ser destaque no cenário brasileiro de engenharia, nas áreas de planejamento, coordenação, instalações, montagem e manutenção eletromecânica industrial.</p>
-
-            <div class="grid-col-3">
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-check-circle" aria-hidden="true"></i>
-                <h3 class="card__title">INTEGRIDADE</h3>
-              </div>
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-stopwatch" aria-hidden="true"></i>
-                <h3 class="card__title">EXCELÊNCIA</h3>
-              </div>
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-compress-arrows-alt" aria-hidden="true"></i>
-                <h3 class="card__title">RESPEITO</h3>
-              </div>
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-thumbs-up" aria-hidden="true"></i>
-                <h3 class="card__title">RECONHECIMENTO</h3>
-              </div>
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-hourglass-start" aria-hidden="true"></i>
-                <h3 class="card__title">INICIATIVA</h3>
-              </div>
-              <div class="card card--valores">
-                <i class="card__icon fa-solid fa-street-view" aria-hidden="true"></i>
-                <h3 class="card__title">INTEGRAÇÃO DA EQUIPE</h3>
-              </div>
-            </div>
           </div>
-          <div class="clear"></div>
         </div>
-        <!--ENDCOMPONENTS-->
-      </section>
-    </div> <!-- end content -->
+      </div>
+      
+      <div class="wra-logo-intro">
+        <img src="imagens/logo.png" alt="WRA" title="WRA" loading="lazy" class="picture-center">
+        <div class="wra-intro-text">
+            <p>A WRA é uma empresa especializada em serviços de engenharia, projetos, planejamentos e montagens industriais. Nossa equipe técnica possui vasta experiência e está alinhada com as principais tendências e tecnologias mundiais, garantindo a constante melhoria de processos produtivos.</p>
+            <p>Somos especialistas em melhorias contínuas de tecnologia no mercado de movimentação de granéis. Realizamos projetos básicos e executivos, trazendo soluções qualificadas de engenharia industrial - seja de forma direta ou em parceria com empresas tradicionais do mercado.</p>
+        </div>
+      </div>
+
+      <h2 class="wra-section-title">Nossos Fundamentos</h2>
+
+      <div class="wra-mvv-grid">
+        <div class="wra-mvv-item">
+          <h3>Missão</h3>
+          <p>Planejar e oferecer soluções com excelência, segurança e qualidade, proporcionando a satisfação do nosso cliente final, acionistas, colaboradores e de toda a sociedade.</p>
+        </div>
+        <div class="wra-mvv-item">
+          <h3>Visão</h3>
+          <p>Ser referência no cenário brasileiro de engenharia, destacando-se nas áreas de planejamento, coordenação, instalações e manutenção eletromecânica industrial.</p>
+        </div>
+        <div class="wra-mvv-item">
+          <h3>Valores</h3>
+          <p>Acreditamos na integridade, excelência e respeito. Nosso sucesso é construído com reconhecimento, iniciativa e a forte integração da nossa equipe.</p>
+        </div>
+      </div>
+      
+      <h2 class="wra-section-title">Nossos Princípios</h2>
+
+      <div class="wra-values-grid">
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-check-circle"></i></div>
+          <h4>Integridade</h4>
+        </div>
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-stopwatch"></i></div>
+          <h4>Excelência</h4>
+        </div>
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-compress-arrows-alt"></i></div>
+          <h4>Respeito</h4>
+        </div>
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+          <h4>Reconhecimento</h4>
+        </div>
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-hourglass-start"></i></div>
+          <h4>Iniciativa</h4>
+        </div>
+        <div class="wra-value-card">
+          <div class="wra-icon"><i class="fa-solid fa-street-view"></i></div>
+          <h4>Integração da Equipe</h4>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>
+</div> <!-- end content -->
   </main>
   <div class="clear"></div>
 <footer>
