@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /blog/
+
+# arquivos reais / diretórios passam direto
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /blog  -> index.php
+RewriteRule ^$ index.php [L]
+
+# /blog/admin -> admin.php
+RewriteRule ^admin/?$ admin.php [L]
+
+# /blog/slug-do-post -> view.php?slug=...
+RewriteRule ^([\w-]+)/?$ view.php?slug=$1 [L,QSA]

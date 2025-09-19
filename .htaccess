@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# 1) Forçar sem www (não mexe no esquema http/https)
+RewriteCond %{HTTP_HOST} ^www\.wra\.ind\.br$ [NC]
+RewriteRule ^(.*)$ //wra.ind.br/$1 [R=301,L]
+
+# 2) Remover .html da URL (redireciona /pagina.html -> /pagina)
+# Evita loop usando THE_REQUEST (só redireciona quando o .html veio da URL do navegador)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 3) Servir o arquivo .html quando acessarem sem extensão (rewrite interno, sem redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]
